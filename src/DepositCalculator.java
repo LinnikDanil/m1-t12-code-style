@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class DepositCalculator {
-    double calculateComplexPercent(double a, double y, int d) {
+    double calculateComplexPercent(double a, double y, int d) { //с такими названиями параметров не сразу понимаешь, какие аргументы принимаются
         double pay = a * Math.pow((1 + y / 12), 12 * d);
         return setRound(pay, 2);
     }
@@ -11,7 +11,7 @@ public class DepositCalculator {
     }
 
     double setRound(double value, int places) {
-        double ScaLe = Math.pow(10, places);
+        double ScaLe = Math.pow(10, places); //Не забывай про lowerСamelCase для названий переменных
         return Math.round(value * ScaLe) / ScaLe;
     }
 
